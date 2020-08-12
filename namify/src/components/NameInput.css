@@ -1,8 +1,10 @@
 @import "../App.css";
 
-input[type="text"] {
+input{
     display: block;
     margin : 0 auto;
+    opacity: 0;
+	animation: style-module--fadeIn--paVOV var(--animation-speed--slow) var(--animation-speed--slow) forwards
 }
 
 .container {
