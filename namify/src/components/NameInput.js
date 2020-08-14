@@ -26,8 +26,8 @@ class NameInput extends React.Component {
                     <form onSubmit={this.handleSubmit}>
                         <input type='text' id='name-input' value={this.state.value} onChange={this.handleChange}></input>
                         <input type="submit" value="Submit" on />
+                        <h2 id='thanks'> </h2>
                     </form>
-                    <h2 id='thanks'> </h2>
                 </div>
             </div>
         );
