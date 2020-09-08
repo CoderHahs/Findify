@@ -4,6 +4,7 @@ class SongPicker extends React.Component {
     render() {
         return (
             //to implement
+            <h1> What's Poppin</h1>
         );
     }
 }

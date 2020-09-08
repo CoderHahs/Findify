@@ -1,8 +1,7 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import NameInput from './components/NameInput'
-import Spotify from './components/Spotify';
+import SongPicker from './components/SongPicker';
 
 function App() {
   return (
@@ -22,7 +21,7 @@ function App() {
       </header>
 
       <body>
-        {/* <Spotify /> */}
+        <SongPicker />
       </body>
     </div>
   );
