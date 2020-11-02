@@ -1,4 +1,7 @@
 import React from 'react';
+import dataset from '../data/spotify_dataset.json';
+
+const data = data.map(dataset)
 
 class SongPicker extends React.Component {
     render() {
