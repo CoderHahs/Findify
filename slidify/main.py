@@ -5,15 +5,17 @@ import spotify as sp
 import sys
 
 app = Flask(__name__)
+
 @app.route("/")
 def home():
     if request.method == 'GET':
-        if request.args['submit_button'] == 'Like':
-            spotify_id = request.args['id']
-            sp.configure_score(spotify_id, True)
-        elif request.args['submit_button'] == 'Dislike':
-            spotify_id = request.args['id']
-            sp.configure_score(spotify_id, False)
+        if 'submit_button' in request.args:
+            if request.args['submit_button'] == 'Like':
+                spotify_id = request.args['id']
+                sp.configure_score(spotify_id, True)
+            elif request.args['submit_button'] == 'Dislike':
+                spotify_id = request.args['id']
+                sp.configure_score(spotify_id, False)
     spotify_id = sp.getSpotifyId()
     return render_template("home.html", spotify_id=spotify_id)
 
