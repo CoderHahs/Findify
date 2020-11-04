@@ -1,13 +1,19 @@
 import pandas as pd
 import numpy as np
+import lsh
 import sys
 
 df = pd.read_csv('../spotify_dataset/data.csv')
 score = dict()
+history = set()
 
 def getSpotifyId():
-    spotify_id = df.sample().iloc[0]['id']
-    return spotify_id
+    if (score['acousticness'][1] == 1)
+        spotify_id = df.sample().iloc[0]['id']
+        return spotify_id
+    else:
+        spotify_id = find_best_match(0.5, 6)
+        return spotify_id
 
 def configure_score(id, b):
     row = df[df['id'] == id]
@@ -22,5 +28,9 @@ def configure_score(id, b):
                 new_avg = (float(row.iloc[0][col]) + avg * num) / (num+1)
                 score[col] = [new_avg, num+1]
 
-def find_best_match():
-    pass
+def find_best_match(threshold, num_pred):
+    data = []
+    for key in score.keys():
+        data.append(score[key][0])
+    spotify_id = lsh.full_lsh(data, threshold, num_pred, df)
+    return spotify_id
