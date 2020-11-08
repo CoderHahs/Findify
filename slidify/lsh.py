@@ -4,7 +4,7 @@ from datasketch import MinHash, MinHashLSH
 import pickle
 import sys
 
-lsh_signatures = pickle.load(open('lsh_signatures.sav', 'rb'))
+lsh_signatures = pickle.load(open('lsh_signatures_0.3.sav', 'rb'))
 
 def create_minhash(data, num_perm):
     min_hash = []
@@ -43,6 +43,7 @@ def get_random_id(df):
 def full_lsh(data, num_perm, df):
     min_hash = create_minhash(data, num_perm)
     results = query_lsh(min_hash, lsh_signatures)
+    print(results)
     if (len(results[0]) == 0):
         return get_random_id(df)
     else:

@@ -22,7 +22,7 @@ def getSpotifyId():
         spotify_id = find_best_match(6)
         return spotify_id
 
-def configure_score(id), b:
+def configure_score(id, b):
     row = df[df['id'] == id]
     row = row[['acousticness', 'danceability', 'duration_ms', 'energy', 'instrumentalness', 'liveness', 'loudness','speechiness', 'tempo', 'valence', 'year']]
     if (b):
@@ -40,11 +40,11 @@ def find_best_match(num_pred):
     data = []
     for key in score.keys():
         data.append(score[key][0])
-    # print(data, file = sys.stderr)
-    # spotify_id = lsh.full_lsh(data, num_pred, df)
-    # return spotify_id
-    print(data, file=sys.stderr)
-    return lsh.get_random_id(df)
+    print(data, file = sys.stderr)
+    spotify_id = lsh.full_lsh(data, num_pred, df)
+    return spotify_id
+    # print(data, file=sys.stderr)
+    # return lsh.get_random_id(df)
     # id = ''
     # min_score = np.Inf
     # for index, row in df.iterrows():
