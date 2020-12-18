@@ -1,2 +1,2 @@
 # namify
-Match your name with a song from Spotify
+Find new songs to listen to based on previously liked music.
