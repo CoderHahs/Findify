@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Findify | Home</title>
+</head>
+
+<body style="background-color:#191414;">
+    {% extends "header.html" %}
+    {% block content %}
+
+    <div class="sd-container-inner" style="display: inline-block;text-align: center;padding-top:4%">
+        <form style="display: inline-block;text-align: center;">
+            <iframe title='spotify' src=" https://open.spotify.com/embed/track/{{spotify_id}}" width="300" height="380"
+                frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <div class="sd-container-inner" style="padding-top:5%">
+                <button class="style-module--button--1d0fQ" type="submit" name="submit_button" value="Dislike"
+                    style="padding-right:5%">
+                    <img src="{{ url_for('static',    filename='images/dislike.png') }}" width="45px" height="45px" />
+                </button>
+                <button class="style-module--button--2d0fQ" type="submit" name="submit_button" value="Like"
+                    style="padding-left:5%">
+                    <img src="{{ url_for('static',    filename='images/like.png') }}" width="50px" height="50px" />
+                </button>
+            </div>
+            <input type='text' name='id' value='{{ spotify_id }}' style='opacity: 0'>
+        </form>
+    </div>
+
+    {% endblock %}
+</body>

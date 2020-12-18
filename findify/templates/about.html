@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Slidify | About</title>
+
+</head>
+
+<body style="background-color:#191414;">
+    {% extends "header.html" %}
+    {% block content %}
+
+    <div class="sd-container-inner" style="display: inline-block;text-align: center;">
+        <p class="t-body-3 style-module--description--1Wa85"
+            style="color: #FFFFFF;width: 60%;transform: translateX(30%);">
+            Findify helps you find new songs based on your tastes. Using <a target="_blank"
+                href="https://developer.spotify.com/community/showcase/spotify-audio-analysis/">Spotify's Audio Analysis
+                API</a> along with <a target="_blank"
+                href="http://www.cs.cmu.edu/~guyb/realworld/slidesS13/minhash.pdf">Locality
+                Sensitive Hashing</a>, Findify finds the closest match to previously liked songs. Check out the code on
+            Github.
+        </p>
+    </div>
+
+    {% endblock %}
+</body>

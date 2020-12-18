@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Findify</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static',    filename='css/home.css') }}">
+
+</head>
+
+<bo>
+    <header id="sd-topbar" class="sd-container">
+        <div class="sd-container-inner">
+            <div class="style-module--inner--1qRHH" style="opacity: 1">
+                <a aria-label="Go to homepage" class="style-module--logo--10oUe" href="/">
+                    <h1 class="title" style="color: #1DB954;">Findify</h1>
+                </a>
+                <nav aria-label="site navigation" class="style-module--desktop-nav--22t5t">
+                    <ul class="unstyled-list style-module--navigation--Xeg87" style="color: #FFFFFF;">
+                        <li><a class="t-ui-2 style-module--item--2doqO "
+                                href="{{ url_for('about') }}"><span>About</span></a></li>
+                        <li><a class="t-ui-2 style-module--item--2doqO " target="_blank"
+                                href="https://hrithikshah.com"><span>Hire
+                                    me!</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="sd-container">
+        {% block content %}
+        {% endblock %}
+    </div>
+    </body>
