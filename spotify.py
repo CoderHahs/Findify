@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-import lsh
+import slsh as lsh
 import sys
 
 df_master = pd.read_csv('static/data/data.csv')
